@@ -5,11 +5,10 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
 router.get('/', (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
-
-});
-
+ Product.findAll({include:[Category,{model: Tag, through: ProductTag}]})
+.then((prodData) => {
+    res.json(prodData);
+})});
 // get one product
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
@@ -27,7 +26,7 @@ router.post('/', (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
- 
+
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
