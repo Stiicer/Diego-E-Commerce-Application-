@@ -19,6 +19,7 @@ n/a
 
 ## Usage
 
+
 Using insomnia product categories can be displayed and communicate with eachother using mysql express.js and sequlize
 
 
