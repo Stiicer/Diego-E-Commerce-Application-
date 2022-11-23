@@ -19,7 +19,7 @@ n/a
 
 ## Usage
 
-Using insomnia users and thoughts are created then reactions can be made to comment on the thoughts
+Using insomnia product categories can be displayed and communicate with eachother using mysql express.js and sequlize
 
 
 
