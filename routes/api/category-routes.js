@@ -64,10 +64,10 @@ router.delete('/:id', async (req, res) => {
   try{
     let data = await Category.destroy({
       where:{
-        id:req.params.id
+        id: req.params.id
       }
     });
-  }catch(err){res.status(500).json(error)};
+  }catch(err){res.status(500).json(err)};
 });
 
 module.exports = router;
